@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="enjoy.css">
+      <title>회원가입</title>
+  </head>
+  <body>
+    <form>
+      <ul>
+        <li>
+          <label>
+            아이디<br>
+            <input type ="text" id="new_id" size="61" placeholder="아이디" required>
+          </label>
+        </li>
+        <li>
+          <label>
+            비밀번호<br>
+            <input type ="password" id="new_pw" size="61" placeholder="특수문자포함" required>
+          </label>
+        </li>
+        <li>
+          <label>
+            비밀번호 재확인<br>
+            <input type ="password" id="new_ppw" size="61" placeholder="아이디" required>
+          </label>
+        </li>
+        <li>
+          <label>
+            이름<br>
+            <input type ="text" id="new_name" size="61" placeholder="성명" required>
+          </label>
+        </li>
+        <li>
+          <label>
+            생년월일<br>
+            <input type ="text" id="year" size="15" placeholder=" 년(4자)" required>
+          </label>
+          <select id="month">
+            <option value="0">월</option>
+            <option value="1">1월</option>
+            <option value="2">2월</option>
+            <option value="3">3월</option>
+            <option value="4">4월</option>
+            <option value="5">5월</option>
+            <option value="6">6월</option>
+            <option value="7">7월</option>
+            <option value="8">8월</option>
+            <option value="9">9월</option>
+            <option value="10">10월</option>
+            <option value="11">11월</option>
+            <option value="12">12월</option>
+          </select>
+          <input type="text" id="day" size="15" placeholder=" 일" required>
+        </li>
+        <li>
+          <label>
+            성별<br>
+            <select>
+              <option value="select">색상선택</option>
+              <option value="R">빨강</option>
+              <option value="G">초록</option>
+            </select>
+          </label>
+        </li>
+        <li>
+          <label>
+            본인 확인 이메일<small>(선택)</small><br>
+            <input type="email" id="em" size="61" placeholder=" 선택입력">
+          </label>
+        </li>
+        <li>
+          <label>
+            휴대전화
+          </label><br>
+          <select id="sel_tel">
+            <option value="korea">대한민국+82</option>
+          </select><br>
+        </li>
+        <li>
+          <input type="tel"  id="tel" size="32" placeholder=" 전화번호 입력" required>
+          <button type="button" id="bt_secu"> 인증번호 받기</button>
+        </li>
+        <input type="text" id="security" size="61" palceholder="인증번호를 입력해주세요." required>
+        <li>
+          <button type="submit" calss="sub">가입하기</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>

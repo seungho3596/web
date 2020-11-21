@@ -1,0 +1,23 @@
+#content{
+  padding: 30px;
+  width : 1000px;
+  height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding: 20px;
+}
+#bigImage{
+  margin-bottom: 10px;
+}
+#big{
+  width: 310px;
+  height: 310px;
+}
+.small{
+  width: 100px;
+  height: 100px;
+}
+.detail{
+  padding: 20px;
+}

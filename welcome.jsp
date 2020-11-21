@@ -1,0 +1,181 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="java.js"></script>
+  <script language="javascript" src="jquery-3.5.1.min.js" type="text/javascript"></script>
+  <script language="javascript" src="rolling/jquery-ui.min.js" type="text/javascript"></script>
+  <script language="javascript" src="rolling/jq.rolling.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+<title>군용물품사이트</title>
+</head>
+<body>
+<%
+Cookie[] c = request.getCookies();
+if (c != null) {
+	for (Cookie cf : c) {
+		if (cf.getName().equals("id")){
+			String ids = cf.getValue();
+			session.setAttribute("id", ids);
+		}
+	}
+}
+
+// 세션값 가져오기
+String id = (String) session.getAttribute("id"); // Object 타입이므로 다운캐스팅
+%>
+<header>
+<div class="grid1">
+  <a href="welcome.jsp"><img src="image/military.jpg"></a>
+  <div class="button">
+    <ul>
+    <li><%=id %>님이 로그인하였습니다.</li>
+    <li><input type="button" onclick="location.href='index.html'" value="LogOut" /></li>
+    <li><input type="button" onclick="location.href='shopcart.jsp'" value="buy" /></li>
+    <ul>
+  </div>
+</div>
+</header>
+<section class="adver">
+  <div class="grid2">
+    <div>
+      <h2>category<h2>
+      <a href="shopdetail.html"><img src="image/cate1.jpg" style="border-radius: 8px; padding-top:3px;"></a>
+      <a href="www.naver.com"><img src="image/cate2.jpg"style="border-radius: 8px;"></a>
+      <a href="www.naver.com"><img src="image/cate3.jpg"style="border-radius: 8px;"></a>
+      <a href="www.naver.com"><img src="image/cate4.jpg"style="border-radius: 8px;"></a>
+      <a href="comment.html"><img src="image/cate5.jpg"style="border-radius: 8px;"></a>
+    </div>
+    <div class="rolling_panel">
+      <ul>
+        <li><img src="https://cdn.pixabay.com/photo/2014/04/02/11/02/army-305276_960_720.png"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2017/10/07/16/38/world-war-2827031_960_720.png"></li>
+        <li><img src="https://cdn.pixabay.com/photo/2012/04/26/12/39/military-42352_960_720.png"></li>
+      </ul>
+    </div>
+    <script>
+      $(".rolling_panel").rolling(1200,500,{autoscroll:1, delay:1500});
+    </script>
+  </div>
+</section>
+  <div class="deco">
+    <h2>인기상품</h2>
+  </div>
+  <section>
+    <div id="content_box">
+      <div class="clear"></div>
+        <div class="box">
+          <form action="add.jsp" method="post" >
+            <ul class="items">
+              <li><img src="https://www.armyshop.co.kr/shopimages/goldpx/0330160000222.jpg" width="232" height="100"></li>
+              <li name="product" class="a">기능성 반팔티</li>
+              <li class="b">9800원 <span>24%</span></li>
+              <li class="c">여름용 기능성 반팔티입니다.</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><a href="buy.html"><img src="https://gdimg.gmarket.co.kr/1277471036/still/600?ver=1519613052" width="232" height="100"></a></li>
+              <li class="a">군용가방</li>
+              <li class="b">3,4000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 군용 가방입니다.</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://lh3.googleusercontent.com/proxy/u90Ce7_qNvwJ9u0c6B3Nw-jQ02TCAZKfl4tfmWhH4OuwD9cc_FtfJwEUIq38bx7mZ2m2hDYKh_F6qV4v-hb0Oiltn0EVSS4xN9qfKOI5fS1wRIsva4_cVf-8d1T7GSGff-ja3xxlBi0" width="232" height="100"></li>
+              <li class="a"> 루즈핏 양말</li>
+              <li class="b">5000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 양말입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://m.k-ration.co.kr/web/product/big/202009/43243c6d104bce935dc4eea1bcb43eea.jpg" width="232" height="100"></li>
+              <li class="a">기능성 긴팔</li>
+              <li class="b">5,0000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 기능성 긴팔입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://lh3.googleusercontent.com/proxy/8E4R_a_YszxUzkohlo8qBm_4oU7xkLZ61R9iqLeBmX2ge2cnGXphEoSM6qLIAobhU_tLHlaJv2Jl7rUK775jvNTcaC4h08M36byOqXNbs8xXX2_0dLw4dE1YuPSm_6oqh0rFJpIM" width="232" height="100"></li>
+              <li class="a">군용모자</li>
+              <li class="b">5,0000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 군용 모자입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://shop3.daumcdn.net/thumb/R200x200.q90/?fname=http%3A%2F%2Fshop3.daumcdn.net%2Fshophow%2Fp%2FK10149415576.jpg%3Fut%3D20200813163723" width="232" height="100"></li>
+              <li class="a">야전삽</li>
+              <li class="b">5,3000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 야전삽입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://gi.esmplus.com/qooninmtk/qoonin/1000000316.jpg" width="232" height="100"></li>
+              <li class="a">고무링</li>
+              <li class="b">2000원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 고무링입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://munguland.com/web/product/medium/201804/28112_shop1_358902.jpg" width="232" height="100"></li>
+              <li class="a">방수장갑</li>
+              <li class="b">1,9800원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 방수 장갑입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://lh3.googleusercontent.com/proxy/oH3XLmjUhUsQ-2qWXBE07HOJp-GNTEYU__ZxPwA514gl-fqDaSmmj3Ctk6UzVlNEQaWEpWmF-wKx8kOILDG0GZFxGTECNFNC8o56i4HfaR6ChQWYo0FIDgrLderafPizAPlEq_VBdNOcaeeSJKU4" width="232" height="100"></li>
+              <li class="a">양털장갑</li>
+              <li class="b">9800원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 양털장갑입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://openimage.interpark.com/goods_image_big/9/6/9/2/7408409692_l.jpg" width="232" height="100"></li>
+              <li class="a">군용 후드티</li>
+              <li class="b">3,9800원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 군용 후드티입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://image10.coupangcdn.com/image/vendor_inventory/bed9/94d2a20839fdcc5bbf5f004fb8eec3a44ade1815f58a0f2d2ff6ec1cedea.jpg" width="232" height="100"></li>
+              <li class="a">군용 후리스</li>
+              <li class="b">5,9800원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 군용 후리스입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+            <ul class="items">
+              <li><img src="https://gi.esmplus.com/qooninmtk/qoonin/1000000435.jpg" width="232" height="100"></li>
+              <li class="a">군용 마스크</li>
+              <li class="b">9800원 <span>24%</span></li>
+              <li class="c">핵인싸로 만들어줄 군용 마스크입니다</li>
+              <li class="d">리뷰 <span> 2</span> 평점 <span>4.5/5</span></li>
+              <li><button class="submit">장바구니</li>
+            </ul>
+        </form>
+        </div>
+        <div class="clear"></div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright © 2018 tcpschool.co.,Ltd. All rights reserved.</p>
+  <address>Contact webmaster for more information. 070-1234-5678</address>
+  <footer>
+    <p>Copyright © 2018 tcpschool.co.,Ltd. All rights reserved.</p>
+  <address>Contact webmaster for more information. 070-1234-5678</address>
+  </footer>
+</body>
+</html>

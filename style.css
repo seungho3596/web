@@ -1,0 +1,107 @@
+html, body{
+  margin:0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+image{
+  display: block;
+  border : 0;
+}
+.button{
+  padding: 15px;
+}
+.button ul li{
+  display: inline;
+}
+button{
+-webkit-transition-duration: 0.4s; /* Safari */
+ transition-duration: 0.4s;
+ border-radius: 5px;
+}
+button:hover {
+ background: #63925F;
+ color: white;
+}
+h1{
+  font-size : 45px;
+  text-align: center;
+  width : 40%;
+  margin: 0;
+}
+h2{
+  margin:0;
+}
+header{
+  height: 100px;
+}
+.clear{
+  clear: both;
+}
+.adver{
+  width: 1900px;
+}
+.grid1{
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  padding: 20px;
+}
+.grid2{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  height: 500px;
+  padding: 10px;
+}
+.category h2{
+  padding-bottom: 5px;
+}
+.deco{
+  padding: 10px;
+}
+.box{
+  width: 1800px;
+  margin: 0 auto;
+}
+.items{
+  float: left;
+}
+.items .a{
+  font-weight: bold;
+  margin-top: 6px;
+}
+.items .b span{
+  color: #a26f59;
+}
+.items .c{
+  font-size: 12px;
+  margin-top: 20px;
+}
+/*이미지슬라이드*/
+.rolling_panel {
+  position: relative;
+  width: 1500px;
+  height: 500px;
+  margin-left: 60px;
+  overflow: hidden;
+}
+.rolling_panel ul {
+ position: absolute;
+list-style: none;
+}
+.rolling_panel ul li {
+  float: left;
+  width: 1200px;
+  height: 500px;}
+/*인기상품*/
+.deco{
+  border-bottom: 1px solid gray;
+}
+.imgpadding{
+  padding: 30px;
+}
+footer{
+  width: 100%;
+  text-align: center;
+  background-color: #bfbfbf;
+}
