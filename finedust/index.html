@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <title>미세먼지</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="keywords" content="이승호, 포트폴리오, 웹 개발, 웹 퍼빌리싱, html, css, javascript" />
+        <meta name="author" content="이승호" />
+        <meta name="description" content="이승호의 웹 포트폴리오" />
+        <meta name="copyright" content="이승호" />
+        <link href="css/common.css" rel="stylesheet" />
+        <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+        <script src="https://kit.fontawesome.com/97a04315a4.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="card">
+                <div class="text-end">
+                    <select id="city" class="form-select">
+                        <option value="0">서울</option>
+                        <option value="1">인천</option>
+                        <option value="2">경기북부</option>
+                        <option value="3">경기남부</option>
+                        <option value="4">강원영서</option>
+                        <option value="5">강원영동</option>
+                        <option value="6">대전</option>
+                        <option value="7">세종</option>
+                        <option value="8">충남</option>
+                        <option value="9">충북</option>
+                        <option value="10">광주</option>
+                        <option value="11">전북</option>
+                        <option value="12">전남</option>
+                        <option value="13">부산</option>
+                        <option value="14">대구</option>
+                        <option value="15">울산</option>
+                        <option value="16">경북</option>
+                        <option value="17">경남</option>
+                        <option value="18">제주</option>
+                    </select>
+                </div>
+                
+                <div id="today" class="text-center">
+                    <p id="onedt" class="mt-3"></p> <!-- 날짜 -->
+                    <i></i> <!-- 이모티콘 -->
+                    <p id="location" class="mt-3"></p> <!-- 도시명 -->
+                    <p id="onecn"></p> <!-- 농도 -->
+                    <p id="note"></p> <!--긴글 설명 -->
+                </div>
+                <div id="future" class="row">
+                    <div id="two" class="col-4">
+                        <i></i>
+                        <p class="dt"></p>
+                        <p class="cn"></p>
+                    </div>
+                    <div id="three" class="col-4">
+                        <i></i>
+                        <p class="dt"></p>
+                        <p class="cn"></p>
+                    </div>
+                    <div id="four" class="col-4">
+                        <i></i>
+                        <p class="dt"></p>
+                        <p class="cn"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script src="script/script.js"></script>
+    </body>
+</html>
